@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-sm-1">
+    
+    <button type="button" class='btn btn-primary btn-lg' {{action 'gotoNewFood'}}>Új Kaja</button>
+  
+  </div>
+  <div class="col-sm-11">
+  
+    <ul class="list-group">
+    {{#each model as |food|}}
+      <li class="list-group-item" >
+        <div class="row">
+          <div class="col-lg-2">
+            
+            
+            
+                  <img src='{{food.image}}' class="img-rounded" height='100px'/>
+                  
+                  
+                  
+          </div>
+          <div class="col-lg-3">
+            
+            
+            
+                  {{food.name}}
+                  
+                  
+                  
+          </div>
+          <div class="col-lg-3 text-center">
+            
+            
+            
+                  {{#link-to 'ingredients' food.id}}Elkészítés{{/link-to}}
+                  
+                  
+                  
+          </div>      
+          <div class="col-lg-2 text-center">
+            
+            
+            
+                  {{#link-to 'edit-food' food}}Szerkesztés{{/link-to}}
+                  
+                  
+                  
+          </div>
+          <div class="col-lg-2">
+            
+            
+            
+                  <button class="btn-danger pull-right" {{action 'deleteFood' food.id}}><b>X</b></button>
+                  
+                  
+                  
+          </div>
+        </div>
+      </li>
+    {{/each}}
+    </ul>
+  
+  </div>
+</div>

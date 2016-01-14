@@ -1,0 +1,49 @@
+<div class="form-group">
+  <label>Étel neve:</label>
+  {{input type="text" class="form-control" value=newFoodName}}
+</div>
+<div class="form-group">
+  <label>Étel elkészítési ideje:</label>
+  {{input type="text" class="form-control" value=newFoodPrepTime}}
+</div>
+<div class="form-group">
+  <label>Étel elkészítésének leírása:</label>
+  {{textarea value=newFoodDesc rows="6" class="form-control"}}
+</div>
+<div class="form-group">
+  <label>Étel képe (link):</label>
+  {{input type="text" class="form-control" value=newFoodImg}}
+</div>
+
+
+
+<div class="form-group">
+    <label>Hozzávalók:</label>
+    <div class="row">
+        <div class="col-sm-11">
+          {{view "select" class="form-control"
+                        content=model
+                        optionLabelPath="content.name"
+                        optionValuePath="content.id"
+                        prompt="Válassz hozzávalót:"
+                        selection=selectedIngredient}}
+        </div>
+        <div class="col-sm-1">
+            <button {{action "addIngredient" selectedIngredient}} class="btn btn-primary"><b>+</b></button>
+        </div>
+    </div>
+</div>
+
+
+<ul class="list-group">
+{{#each ingredients as |ingredient|}} <!--ingredients : ez a controllerben a this.ingredients tömb -->
+    <li class="list-group-item"><img class="img-rounded" src='{{ingredient.image}}' height='100px' /> {{ingredient.name}}: {{ingredient.description}} <button class="btn-danger pull-right" {{action 'removeIngredient' ingredient}}><b>X</b></button></li>
+{{/each}}
+</ul>
+
+
+
+<div class="row text-center">
+    <button class="btn btn-primary" {{action "goBack"}} >Vissza</button>
+    <button class="btn btn-primary" {{action "addFood"}} >Étel Hozzáadása</button>
+</div>

@@ -1,0 +1,14 @@
+<h1>Új hozzávaló felvétele:</h1>
+Hozzávaló neve: {{input value=newIngName}}
+<br>
+Hozzávaló leírása: {{input value=newIngDesc}}
+<br>
+Hozzávaló képe: {{input value=newIngImg}}
+<br>
+<button {{action "addIngredient"}}>Hozzávaló Hozzáadása</button><br>
+<h1>Meglévő hozzávalók:</h1>
+<ul>
+{{#each model as |ingredient|}}
+    <li><img src='{{ingredient.image}}' height='50px' /> {{ingredient.name}}: {{ingredient.description}} <button {{action 'deleteIngredient' ingredient.id}}>X</button></li><br>
+{{/each}}
+</ul>

@@ -1,0 +1,13 @@
+<div class='jumbotron'>
+  <h1>Receptek</h1>
+  <p class='tagline'>
+    <img {{bind-attr src='logo'}} alt='Logo' height='100px'/>
+    Az összes recepted.
+  </p>
+  <p>
+    {{#link-to 'foods' class='btn btn-primary btn-lg'}}
+      Böngéssz az ételek között
+    {{/link-to}}
+  </p>
+</div>
+<p class='pull-right text-muted'>Rendered on {{time}}</p>

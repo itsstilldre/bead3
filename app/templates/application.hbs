@@ -1,3 +1,18 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class='navbar navbar-default'>
+  <div class='container'>
+    {{#link-to 'index' class='navbar-brand'}}<img src='images/Recipes-logo.png' alt='logo' height='40px' width='200px' />{{/link-to}}
+    <ul class='nav navbar-nav navbar-right'>
+      <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li>{{#link-to 'foods'}}Ételek{{/link-to}}</li>
+      <li>{{#link-to 'list-ingredients'}}Hozzávalók{{/link-to}}</li>
+    </ul>
+  </div>
+</div>
+<div class='container'>
+  {{outlet}}
+</div>
+<footer class='container'>
+  <hr />
+  <p class='pull-left'>&copy; 2016 Receptek Alkalmazás - Selmeci Gábor</p>
+  <p class='pull-right'>{{#link-to 'credits'}}Köszönet{{/link-to}}</p>
+</footer>

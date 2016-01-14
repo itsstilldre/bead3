@@ -1,0 +1,47 @@
+<h1>{{model.name}} szerkesztése</h1>
+
+Étel neve: {{input value=model.name class="form-control"}}
+<br>
+Étel elkészítési ideje: {{input value=model.preparationTime}}
+<br>
+Étel elkészítése: {{textarea value=model.description cols="80" rows="6"}}
+<br>
+Étel képe(link): {{input value=model.image}}
+<br>
+
+
+
+
+
+
+
+<h1>Hozzávalók Hozzáadása:</h1>
+{{view "select" content=ingredients
+                optionLabelPath="content.name"
+                optionValuePath="content.id"
+                prompt="Válassz hozzávalót:"
+                selection=selectedIngredient}}
+<button {{action "addIngredient" selectedIngredient model}}>Hozzávaló Hozzáadása</button>
+<br>
+
+
+
+
+<h1>Meglévő Hozzávalók:</h1>
+<ul>
+{{#each model.ingredients as |ingredient|}}
+    <li><img src='{{ingredient.image}}' height='100px' /> {{ingredient.name}}: {{ingredient.description}} <button {{action 'removeIngredient' ingredient model}}>X</button></li>
+{{/each}}
+</ul>
+
+
+
+
+<button {{action "editFood" model}} >Mentés</button>
+<br>
+
+
+
+
+
+{{#link-to 'foods'}}Vissza{{/link-to}}

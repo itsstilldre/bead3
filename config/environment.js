@@ -18,7 +18,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -42,6 +42,16 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+  
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self'",
+    'font-src': "'self' 'unsafe-eval' https://fonts.gstatic.com",
+    'connect-src': "'self' 'unsafe-eval' http://bead33-api-itsstilldre.c9users.io",
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-eval' https://fonts.googleapis.com",
+    'media-src': "'self'"
+  };
 
   return ENV;
 };

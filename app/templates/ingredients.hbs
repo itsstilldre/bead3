@@ -1,0 +1,33 @@
+<h1>{{model.name}}</h1>
+<br>
+<p>Elkészítési idő: {{model.preparationTime}}</p>
+<br>
+<img {{bind-attr src='model.image'}} width='auto' height='300px'/>
+<br>
+<h1>Hozzávalók:</h1>
+<br>
+
+
+
+
+
+<ul>
+{{#each model.ingredients as |ingredient|}}
+  <li><img src='{{ingredient.image}}' height='100px' /> {{ingredient.name}}: {{ingredient.description}}</li><br>
+{{/each}}
+</ul>
+<br>
+
+
+
+<h1>Leírás:</h1>
+<br>
+<p>{{model.description}}</p>
+<br>
+
+
+
+
+
+
+{{#link-to 'foods'}}Vissza{{/link-to}}
