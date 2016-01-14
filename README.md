@@ -72,21 +72,7 @@ RECEPTEK
   * Felvett hozzávalók listázása
 
 Használatieset-modell:
-![Használatieset-modell](docs/images/utvonalterv.png)   ...
-
-Használati eset diagramok: az elérhető funkiók kapcsolatát jelenítik meg, ha kell, akkor esetenként rövid magyarázó szöveggel.
-![Használati eset diagram](docs/images/useCase.png) ...
-
-###Étel Hozzáadása
-Étel hozzáadása a következőképpen történik.
-
-...
-
-
-###Hozzávaló Hozzáadása
-Hozzávaló hozzáadása a következőképpen történik.
-
-...
+![Használatieset-modell](public/images/Documentation/hasznalatieset.jpg)   ...
 
 ##Tervezés
 
@@ -169,15 +155,6 @@ Cloud9 Web IDE: Cloud9 egyesít egy erős kód szerkesztőt és egy teljes Ubunt
     * README.md
     * testem.json
 
-##Tesztelés
-...
-
-###Egységtesztek: legalább 1 adatmodell tesztelése
-...
-
-###Funkcionális felületi tesztek: legalább 1 folyamat tesztelése
-...
-
 ###Teszt esetek felsorolása
 * Ételek listázása
 * Étel hozzáadása
@@ -190,7 +167,6 @@ Cloud9 Web IDE: Cloud9 egyesít egy erős kód szerkesztőt és egy teljes Ubunt
 * Hozzávaló törlése
 
 ##Felhasználói dokumentáció
-
 ###Futtatáshoz
 * Böngésző
 * Intenet kapcsolat
