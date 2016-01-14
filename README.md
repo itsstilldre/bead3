@@ -72,7 +72,7 @@ RECEPTEK
   * Felvett hozzávalók listázása
 
 Használatieset-modell:
-![Használatieset-modell](public/images/Documentation/hasznalatieset.jpg)   ...
+![Használatieset-modell](public/images/Documentation/hasznalatieset.png)   ...
 
 ##Tervezés
 
