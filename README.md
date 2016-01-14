@@ -92,24 +92,16 @@ Hozzávaló hozzáadása a következőképpen történik.
 
 ###Achitektúra terv
 ####Komponensdiagram és Oldaltérkép
-![Komponens-diagram](docs/images/nomnoml.png)       ...
+![Komponens-diagram](public/images/Documentation/nomnomidiagram.jpg)       ...
 
 
 ####Végpontok
   * //GET / - főoldal: Bemutatkozás, menű, gomb az ételek listájára vezet
   * //GET /foods: ételek listája - lehetőség van új étel felvételére, törlésére és módosítására
-  * //POST /all-ingredients: hozzávalók listája - lehetőség van új hozzávaéló felvételére, törlésére és módosítására
+  * //GET /all-ingredients: hozzávalók listája - lehetőség van új hozzávaéló felvételére, törlésére és módosítására
   * //GET /newfood: új étel felvétele, és hozzávalók hozzáadása az ételhez
-  * //POST /ingredients/:ingredient_id: egy étel elkészítésének részletes leírása.
+  * //GET /ingredients/:ingredient_id: egy étel elkészítésének részletes leírása.
   * //GET /foods/:food_id: étel szerkesztése
-  * //POST /add - uj étel hozzáadása, ha a név nem üres
-  * //GET /auth/logout: kijelentkezés: /auth/login oldalra vezet
-  * //GET /list - összes étel listázása ?query-re szűrés
-  * //GET /list/:id - 1db étel megjelenitese
-  * //GET /description/:id - 1db étel részletes megjelenitese: recept oldalra navigál
-  * //GET /edit/:id - adott étel szerkesztése: edit oldalra navigál
-  * //POST /edit/:id - étel felvétele, majd a régi törlése miután megekereste
-  * //ANY /delete/:id - adott étel törlése: list oldalra navigál
 
 ###Felhasználóifelület-modell
 ####Design-terv
