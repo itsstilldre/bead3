@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Receptek
 
 This README outlines the details of collaborating on this Ember application.
@@ -51,3 +52,6 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+=======
+# bead3
+>>>>>>> bff90bb58d474e0d32109f422edd8c86376447e6
